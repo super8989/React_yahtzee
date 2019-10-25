@@ -4,7 +4,7 @@ import Die from "./Die";
 class Dice extends Component {
 	render() {
 		return (
-			<div>
+			<div className='Dice'>
 				<Die />
 			</div>
 		);
