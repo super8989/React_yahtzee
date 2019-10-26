@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RuleRow from "./RuleRow";
+import "./ScoreTable.css";
 
 class ScoreTable extends Component {
 	render() {
