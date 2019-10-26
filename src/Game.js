@@ -3,7 +3,18 @@ import Dice from "./Dice";
 import ScoreTable from "./ScoreTable";
 import "./Game.css";
 
+const NUM_DICE = 5;
+const NUM_ROLLS = 3;
+
 class Game extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			dice: Array.from({ length: NUM_DICE }),
+			locked: Array(NUM_DICE).fill(false)
+		};
+	}
+
 	render() {
 		return (
 			<div className='Game'>
