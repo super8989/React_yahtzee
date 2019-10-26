@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import "./RuleRow.css";
 
 class RuleRow extends Component {
 	render() {
 		return (
-			<tr>
-				<td>Name</td>
-				<td>Score</td>
+			<tr className='RuleRow RuleRow-active'>
+				<td className='RuleRow-name'>Name</td>
+				<td className='RuleRow-score'>Score</td>
 			</tr>
 		);
 	}
