@@ -4,20 +4,31 @@ import RuleRow from "./RuleRow";
 class ScoreTable extends Component {
 	render() {
 		return (
-			<div>
-				<section>
+			<div className='ScoreTable'>
+				<section className='ScoreTable-section'>
 					<h2>Upper</h2>
-					<table>
+					<table cellSpacing='0'>
 						<tbody>
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
 							<RuleRow />
 						</tbody>
 					</table>
 				</section>
 
-				<section>
+				<section className='ScoreTable-section ScoreTable-section-lower'>
 					<h2>Lower</h2>
-					<table>
+					<table cellSpacing='0'>
 						<tbody>
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
+							<RuleRow />
 							<RuleRow />
 						</tbody>
 					</table>
