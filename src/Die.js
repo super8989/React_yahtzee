@@ -9,7 +9,7 @@ class Die extends Component {
 				style={{ backgroundColor: this.props.locked ? "grey" : "black" }}
 				onClick={this.props.handleClick}
 			>
-				Die
+				{this.props.val}
 			</button>
 		);
 	}

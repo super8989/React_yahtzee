@@ -22,7 +22,7 @@ class Game extends Component {
 					<h1 className='App-title'>Yahtzee</h1>
 
 					<section className='Game-dice-section'>
-						<Dice />
+						<Dice dice={this.state.dice} locked={this.state.locked} />
 
 						<div className='Game-button-wrapper'>
 							<button className='Game-reroll'>Rolls left</button>
