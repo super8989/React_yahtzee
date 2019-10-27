@@ -5,8 +5,8 @@ class RuleRow extends Component {
 	render() {
 		return (
 			<tr className='RuleRow RuleRow-active'>
-				<td className='RuleRow-name'>Name</td>
-				<td className='RuleRow-score'>Score</td>
+				<td className='RuleRow-name'>{this.props.name}</td>
+				<td className='RuleRow-score'>{this.props.score}</td>
 			</tr>
 		);
 	}
