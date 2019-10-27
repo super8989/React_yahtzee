@@ -30,6 +30,7 @@ class Game extends Component {
 			}
 		};
 		this.roll = this.roll.bind(this);
+		this.doScore = this.doScore.bind(this);
 	}
 
 	roll(evt) {
@@ -52,6 +53,16 @@ class Game extends Component {
 				...st.locked.sliced(idx + 1)
 			]
 		}));
+	}
+
+	doScore(rulename, ruleFn) {
+		//evaluate this ruleFn with the dice and score this rulename
+		this.setState(st => ({
+			scores: { ...st.scores, [rulename]: ruleFn(this.state.dice) },
+			rollsLeft: NUM_ROLLS,
+			locked: Array(NUM_DICE).fill(false)
+		}));
+		this.roll();
 	}
 
 	render() {
@@ -79,7 +90,7 @@ class Game extends Component {
 					</section>
 				</header>
 
-				<ScoreTable scores={this.state.scores} />
+				<ScoreTable scores={this.state.scores} doScore={this.doScore} />
 			</div>
 		);
 	}
