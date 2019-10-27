@@ -12,7 +12,22 @@ class Game extends Component {
 		this.state = {
 			dice: Array.from({ length: NUM_DICE }),
 			locked: Array(NUM_DICE).fill(false),
-			rollsLeft: NUM_ROLLS
+			rollsLeft: NUM_ROLLS,
+			scores: {
+				ones: undefined,
+				twos: undefined,
+				threes: undefined,
+				fours: undefined,
+				fives: undefined,
+				sixes: undefined,
+				threeOfKind: undefined,
+				fourOfKind: undefined,
+				fullHouse: undefined,
+				smallStraight: undefined,
+				largeStraight: undefined,
+				yahtzee: undefined,
+				chance: undefined
+			}
 		};
 		this.roll = this.roll.bind(this);
 	}
@@ -64,7 +79,7 @@ class Game extends Component {
 					</section>
 				</header>
 
-				<ScoreTable />
+				<ScoreTable scores={this.state.scores} />
 			</div>
 		);
 	}
