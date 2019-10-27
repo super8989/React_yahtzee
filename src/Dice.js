@@ -7,7 +7,13 @@ class Dice extends Component {
 		return (
 			<div className='Dice'>
 				{this.props.dice.map((d, idx) => (
-					<Die val={d} locked={this.props.locked[idx]} idx={idx} key={idx} />
+					<Die
+						handleClick={this.props.handleClick}
+						val={d}
+						locked={this.props.locked[idx]}
+						idx={idx}
+						key={idx}
+					/>
 				))}
 			</div>
 		);

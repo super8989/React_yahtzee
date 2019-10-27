@@ -15,6 +15,17 @@ class Game extends Component {
 		};
 	}
 
+	toggleLocked(idx) {
+		//toggle whether idx is locked or not
+		this.setState(st => ({
+			locked: [
+				...st.locked.sliced(0, idx),
+				!st.locked[idx],
+				...st.locked.sliced(idx + 1)
+			]
+		}));
+	}
+
 	render() {
 		return (
 			<div className='Game'>
@@ -22,7 +33,11 @@ class Game extends Component {
 					<h1 className='App-title'>Yahtzee</h1>
 
 					<section className='Game-dice-section'>
-						<Dice dice={this.state.dice} locked={this.state.locked} />
+						<Dice
+							dice={this.state.dice}
+							locked={this.state.locked}
+							handleClick={this.toggleLocked}
+						/>
 
 						<div className='Game-button-wrapper'>
 							<button className='Game-reroll'>Rolls left</button>
