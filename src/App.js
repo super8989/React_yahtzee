@@ -1,6 +1,7 @@
 import React from "react";
 import Game from "./Game";
 import "./App.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 function App() {
 	return (
