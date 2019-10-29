@@ -18,18 +18,18 @@ class Die extends Component {
 	}
 
 	render() {
-		let classes = `Die fas fa-dice-${
-			this.props.numberWords[this.props.val - 1]
-		} fa-5x `;
+		const { numberWords, locked, val, disabled } = this.props;
+		let classes = `Die fas fa-dice-${numberWords[val - 1]} fa-5x `;
 
-		if (this.props.locked) classes += "Die-locked";
+		if (locked) classes += "Die-locked";
 
 		return (
 			<i
 				className={classes}
 				onClick={this.handleClick}
 				//onClick={() => this.props.handleClick(this.props.idx)}
-			></i>
+				disabled={disabled}
+			/>
 		);
 	}
 }
