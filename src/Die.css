@@ -1,3 +1,5 @@
+/* This is for dice numbers
+
 .Die {
 	font-size: 25px;
 	display: inline-block;
@@ -7,4 +9,27 @@
 	background-color: black;
 	color: white;
 	margin-right: 1em;
+} */
+
+/* Font Awesome icon styles for dice */
+
+.Die {
+	color: white;
+	text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.Die-locked {
+	opacity: 0.5;
+	text-shadow: none;
+}
+
+.Die:not(.Die-locked):hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.Die-rolling:hover,
+.Die[disabled] {
+	cursor: not-allowed;
 }

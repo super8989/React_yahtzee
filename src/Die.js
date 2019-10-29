@@ -20,12 +20,13 @@ class Die extends Component {
 	render() {
 		let classes = `Die fas fa-dice-${
 			this.props.numberWords[this.props.val - 1]
-		} fa-5x`;
+		} fa-5x `;
+
+		if (this.props.locked) classes += "Die-locked";
 
 		return (
 			<i
 				className={classes}
-				style={{ backgroundColor: this.props.locked ? "grey" : "black" }}
 				onClick={this.handleClick}
 				//onClick={() => this.props.handleClick(this.props.idx)}
 			></i>
