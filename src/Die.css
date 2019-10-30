@@ -17,6 +17,7 @@
 	color: white;
 	text-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease;
+	animation: spin 2s ease-out infinite;
 }
 
 .Die-locked {
@@ -32,4 +33,13 @@
 .Die-rolling:hover,
 .Die[disabled] {
 	cursor: not-allowed;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
