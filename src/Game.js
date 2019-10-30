@@ -90,6 +90,7 @@ class Game extends Component {
 							locked={this.state.locked}
 							handleClick={this.toggleLocked}
 							disabled={this.state.rollsLeft === 0} //true or false
+							rolling={this.state.rolling}
 						/>
 
 						<div className='Game-button-wrapper'>
