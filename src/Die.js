@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import "./Die.css";
+import React, { Component } from 'react';
+import './Die.css';
 
 class Die extends Component {
 	static defaultProps = {
-		numberWords: ["one", "two", "three", "four", "five", "six"],
+		numberWords: ['one', 'two', 'three', 'four', 'five', 'six'],
 		//to get 'two': 2 - 1 for the index
 		val: 1
 	};
@@ -20,10 +20,10 @@ class Die extends Component {
 
 	render() {
 		const { numberWords, locked, val, disabled, rolling } = this.props;
-		let classes = `Die fas fa-dice-${numberWords[val - 1]} fa-5x`;
+		let classes = `Die fas fa-dice-${numberWords[val - 1]} fa-3x`;
 
-		if (locked) classes += " Die-locked";
-		if (rolling) classes += " Die-rolling";
+		if (locked) classes += ' Die-locked';
+		if (rolling) classes += ' Die-rolling';
 
 		return (
 			<i
